@@ -1,0 +1,24 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'sunrise_mesh_0084.obj'
+
+# Vertices (Count = 4)
+v -7 -16 -0.16
+v -8 -16 -0.16
+v -8 -15 -0.16
+v -7 -15 -0.16
+
+# Texture cooridinates (Count = 4)
+vt 0.44 0.4
+vt 0.48 0.4
+vt 0.48 0.44
+vt 0.44 0.44
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g sunrise_mesh_0084
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+
