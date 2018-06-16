@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-  productGUID: 05e09f73ec50d0e408b24dae0263e1ba
+  productGUID: 33ada81ce551e564fa0652936e96dee1
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -121,11 +121,11 @@ PlayerSettings:
   wiiUAllowScreenCapture: 1
   wiiUControllerCount: 0
   m_SupportedAspectRatios:
-    4:3: 1
-    5:4: 1
-    16:10: 1
+    4:3: 0
+    5:4: 0
+    16:10: 0
     16:9: 1
-    Others: 1
+    Others: 0
   bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
@@ -630,11 +630,12 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 99612f9c-733d-4d18-8630-694eb20c39cc
-  projectName: New Unity Project (2)
+  cloudProjectId: 98f3b66b-3899-4175-9534-f19a241fef78
+  projectName: New Unity Project (2) (1)
   organizationId: atratus94
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
