@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Box
+  - BoxKey
   layers:
   - Default
   - TransparentFX
@@ -16,9 +18,9 @@ TagManager:
   - a
   - b
   - virtual layer
-  - 
-  - 
-  - 
+  - Player
+  - Item
+  - ItemOverlay
   - 
   - 
   - 
@@ -46,4 +48,13 @@ TagManager:
     locked: 0
   - name: b
     uniqueID: 2981577599
+    locked: 0
+  - name: Item
+    uniqueID: 1950215147
+    locked: 0
+  - name: Player
+    uniqueID: 2095568719
+    locked: 0
+  - name: ItemOverlay
+    uniqueID: 1362642773
     locked: 0
