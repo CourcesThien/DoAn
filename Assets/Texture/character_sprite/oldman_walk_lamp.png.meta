@@ -3,7 +3,72 @@ guid: 208078a668ebf53449f765355923b265
 timeCreated: 1529175294
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: oldman_walk_lamp_0
+    21300002: oldman_walk_lamp_1
+    21300004: oldman_walk_lamp_2
+    21300006: oldman_walk_lamp_3
+    21300008: oldman_walk_lamp_4
+    21300010: oldman_walk_lamp_5
+    21300012: oldman_walk_lamp_6
+    21300014: oldman_walk_lamp_7
+    21300016: oldman_walk_lamp_8
+    21300018: oldman_walk_lamp_9
+    21300020: oldman_walk_lamp_10
+    21300022: oldman_walk_lamp_11
+    21300024: oldman_walk_lamp_12
+    21300026: oldman_walk_lamp_13
+    21300028: oldman_walk_lamp_14
+    21300030: oldman_walk_lamp_15
+    21300032: oldman_walk_lamp_16
+    21300034: oldman_walk_lamp_17
+    21300036: oldman_walk_lamp_18
+    21300038: oldman_walk_lamp_19
+    21300040: oldman_walk_lamp_20
+    21300042: oldman_walk_lamp_21
+    21300044: oldman_walk_lamp_22
+    21300046: oldman_walk_lamp_23
+    21300048: oldman_walk_lamp_24
+    21300050: oldman_walk_lamp_25
+    21300052: oldman_walk_lamp_26
+    21300054: oldman_walk_lamp_27
+    21300056: oldman_walk_lamp_28
+    21300058: oldman_walk_lamp_29
+    21300060: oldman_walk_lamp_30
+    21300062: oldman_walk_lamp_31
+    21300064: oldman_walk_lamp_32
+    21300066: oldman_walk_lamp_33
+    21300068: oldman_walk_lamp_34
+    21300070: oldman_walk_lamp_35
+    21300072: oldman_walk_lamp_36
+    21300074: oldman_walk_lamp_37
+    21300076: oldman_walk_lamp_38
+    21300078: oldman_walk_lamp_39
+    21300080: oldman_walk_lamp_40
+    21300082: oldman_walk_lamp_41
+    21300084: oldman_walk_lamp_42
+    21300086: oldman_walk_lamp_43
+    21300088: oldman_walk_lamp_44
+    21300090: oldman_walk_lamp_45
+    21300092: oldman_walk_lamp_46
+    21300094: oldman_walk_lamp_47
+    21300096: oldman_walk_lamp_48
+    21300098: oldman_walk_lamp_49
+    21300100: oldman_walk_lamp_50
+    21300102: oldman_walk_lamp_51
+    21300104: oldman_walk_lamp_52
+    21300106: oldman_walk_lamp_53
+    21300108: oldman_walk_lamp_54
+    21300110: oldman_walk_lamp_55
+    21300112: oldman_walk_lamp_56
+    21300114: oldman_walk_lamp_57
+    21300116: oldman_walk_lamp_58
+    21300118: oldman_walk_lamp_59
+    21300120: oldman_walk_lamp_60
+    21300122: oldman_walk_lamp_61
+    21300124: oldman_walk_lamp_62
+    21300126: oldman_walk_lamp_63
+    21300128: oldman_walk_lamp_64
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +105,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -87,9 +152,929 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: oldman_walk_lamp_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 420
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 420
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 420
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 420
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 420
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_6
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 420
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_7
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 420
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_8
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 420
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 360
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_11
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 360
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_12
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 360
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 360
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_14
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 360
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_15
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 360
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_16
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 360
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_18
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 300
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_19
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 300
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_20
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 300
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_21
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 300
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_22
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 300
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_23
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 300
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_24
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 300
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_26
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 240
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_27
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 240
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_28
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 240
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_29
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 240
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_30
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 240
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_31
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 240
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_32
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 240
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_34
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 180
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_35
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 180
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_36
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 180
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_37
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 180
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_38
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 180
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_39
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 180
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_40
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 180
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_42
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 120
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_43
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 120
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_44
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 120
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_45
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 120
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_46
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 120
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_47
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 120
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_48
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 120
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_50
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 60
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_51
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 60
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_52
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 60
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_53
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 60
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_54
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 60
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_55
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 60
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_56
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 60
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_58
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_59
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_60
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_61
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_62
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_63
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: oldman_walk_lamp_64
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 0
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
