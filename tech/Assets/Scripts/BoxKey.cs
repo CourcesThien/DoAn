@@ -15,21 +15,53 @@ public class BoxKey : MonoBehaviour
     private Sprite sprDefault;
 
     private SpriteRenderer sprRender;
+
+    private float disToKey = 0;
+    private float hard = 0.4f;
+    [SerializeField]
+    private bool isDone = false;
     // Use this for initialization
     void Start()
     {
         sprRender = GetComponent<SpriteRenderer>();
         sprDefault = sprRender.sprite;
+        positionBoxKey = transform.position;
+        positionBoxKey.z += 0.4f;
     }
 	
     // Update is called once per frame
     void Update()
     {
-        if (hasKey && currTransKey != null)
+        if (currTransKey == null)
+            return;
+        if (hasKey)
         {
-            
+            if (!isDone)
+            {
+                disToKey = (transform.position - currTransKey.position).magnitude;
+                if (disToKey <= hard)
+                {
+                    currTransKey.position = positionBoxKey;
+                    Debug.Log("done");
+                    isDone = true;
+                }
+            }
+            else
+            {
+                disToKey = (transform.position - currTransKey.position).magnitude;
+                if (disToKey > hard + 0.1f)
+                {
+                    isDone = false;
+                }
+            }
         }
+
     }
+
+    //    void OnGUI()
+    //    {
+    //        GUILayout.Label("abc = " + disToKey);
+    //    }
 
     void OnTriggerEnter(Collider other)
     {

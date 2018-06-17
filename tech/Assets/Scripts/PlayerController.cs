@@ -122,8 +122,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 normalTime = Vector3.zero;
 
-    void OnGUI()
-    {
-        GUILayout.Label("collision - " + normalTime);
-    }
+    //    void OnGUI()
+    //    {
+    //        GUILayout.Label("collision - " + normalTime);
+    //    }
 }
