@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class BoxKey : MonoBehaviour
 {
-    public GameObject objDone;
+    //    public GameObject objDone;
     private bool hasKey = false;
-
+    [SerializeField]
+    private Vector3 positionBoxKey = new Vector3(0, 0.3f, 0);
+    [SerializeField]
     private Transform currTransKey = null;
+
+    public Sprite sprKeyDown;
+    private Sprite sprDefault;
+
+    private SpriteRenderer sprRender;
     // Use this for initialization
     void Start()
     {
-        objDone.SetActive(false);
+        sprRender = GetComponent<SpriteRenderer>();
+        sprDefault = sprRender.sprite;
     }
 	
     // Update is called once per frame
@@ -29,6 +37,7 @@ public class BoxKey : MonoBehaviour
         {
             hasKey = true;
             currTransKey = other.transform;
+            sprRender.sprite = sprKeyDown;
         }
     }
 
@@ -46,6 +55,7 @@ public class BoxKey : MonoBehaviour
         if (other.tag.Equals("BoxKey"))
         {
             hasKey = false;
+            sprRender.sprite = sprDefault;
         }
     }
 
