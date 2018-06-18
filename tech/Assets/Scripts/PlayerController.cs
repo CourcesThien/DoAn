@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 {
 
     //Variables of types Rigidbody and Animator
-    private Rigidbody RBody;
+    public Rigidbody RBody;
     [SerializeField]
     private Animator Anim;
 
@@ -64,24 +64,31 @@ public class PlayerController : MonoBehaviour
             lastMovementVector = movementVector;
             // set updated speed to currentSpeed
             playerSpeed = (playerManager.currentMoveSpeed - playerManager.SubSpeed) * Time.deltaTime;
-
-            //Updates the direction so that we don't snap back to original position 
-            Anim.SetFloat("Velocity_X", movementVector.x);
-            Anim.SetFloat("Velocity_Y", movementVector.z);
-
             RBody.MovePosition(RBody.position + (movementVector * playerSpeed));
 
+            if (Anim != null)
+            {
+                //Updates the direction so that we don't snap back to original position 
+                Anim.SetFloat("Velocity_X", movementVector.x);
+                Anim.SetFloat("Velocity_Y", movementVector.z);
 
-            this.Anim.SetBool("isPush", playerManager.HasCollisionBox);
-            this.Anim.SetBool("isMove", true);     
+
+               
+
+                this.Anim.SetBool("isPush", playerManager.HasCollisionBox);
+                this.Anim.SetBool("isMove", true);  
+            }   
         }
         else
         {
-            this.Anim.SetBool("isMove", false);
-            this.Anim.SetBool("isPush", false);
+            if (Anim != null)
+            {
+                this.Anim.SetBool("isMove", false);
+                this.Anim.SetBool("isPush", false);
 
-            Anim.SetFloat("Last_Velo_X", lastMovementVector.x);
-            Anim.SetFloat("Last_Velo_Y", lastMovementVector.z);
+                Anim.SetFloat("Last_Velo_X", lastMovementVector.x);
+                Anim.SetFloat("Last_Velo_Y", lastMovementVector.z);
+            }
         }
          
     }
