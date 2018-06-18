@@ -7,6 +7,9 @@ public class BridgeStartPoint : MonoBehaviour
     private Collider2D collider;
     public BoxCollider2D boxColliderBridge;
 
+    public Sprite sprDown;
+    public SpriteRenderer sprRender;
+
     void Start()
     {
         collider = GetComponent<Collider2D>();
@@ -22,6 +25,7 @@ public class BridgeStartPoint : MonoBehaviour
                 collider.enabled = false;
                 player.AddGravity();
                 boxColliderBridge.enabled = true;
+                sprRender.sprite = sprDown;
                 SceneOne.Instance.SetActiveWallBlock(false);
                 SceneOne.Instance.SetActiveBoxKey(false);
             }

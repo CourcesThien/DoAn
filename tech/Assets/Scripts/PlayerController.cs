@@ -30,6 +30,8 @@ public class PlayerController : MonoSingleton<PlayerController>
     public Rigidbody2D rigi;
     [SerializeField]
     private Animator Anim;
+    [SerializeField]
+    private Seed seed;
 
     //Variable for Player movement speed
     public float playerSpeed = 0;
@@ -39,6 +41,8 @@ public class PlayerController : MonoSingleton<PlayerController>
     [SerializeField]
     private Vector2 lastMovementVector = Vector2.zero;
 
+    public Transform seedPosition;
+
     void Start()
     {
         rigi = GetComponent<Rigidbody2D>();
@@ -47,6 +51,23 @@ public class PlayerController : MonoSingleton<PlayerController>
         // set initial speed to default and current speed to default
         playerSpeed = playerManager.defaultMoveSpeed * Time.deltaTime;
         playerManager.currentMoveSpeed = playerManager.defaultMoveSpeed;
+
+        StartCoroutine(RandomSeed());
+    }
+
+    public void SetSeed(Seed _seed)
+    {
+        this.seed = _seed;
+    }
+
+
+    private IEnumerator RandomSeed()
+    {
+        while (true)
+        {
+            seedPosition.localPosition = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
+            yield return new WaitForSeconds(Random.Range(3, 4));
+        }
     }
 
     // Update is called once per frame
@@ -71,8 +92,12 @@ public class PlayerController : MonoSingleton<PlayerController>
                 Anim.SetFloat("Velocity_X", movementVector.x);
                 Anim.SetFloat("Velocity_Y", movementVector.y);
 
-
-               
+                if (seed != null)
+                {
+                    seed.anim.SetFloat("Velocity_X", movementVector.x);
+                    seed.anim.SetFloat("Velocity_Y", movementVector.y);
+                    this.Anim.SetBool("isMove", true);  
+                }
 
                 this.Anim.SetBool("isPush", playerManager.HasCollisionBox);
                 this.Anim.SetBool("isMove", true);  
@@ -87,9 +112,29 @@ public class PlayerController : MonoSingleton<PlayerController>
 
                 Anim.SetFloat("Last_Velo_X", lastMovementVector.x);
                 Anim.SetFloat("Last_Velo_Y", lastMovementVector.y);
+
+                if (seed != null)
+                {
+                    this.Anim.SetBool("isMove", false);  
+                }
             }
         }
-         
+
+
+    }
+
+    public Vector2 GetPosition()
+    {
+        return transform.position;
+    }
+
+    public Vector2 GetPositionSeed()
+    {
+        if (seedPosition != null)
+        {
+            return seedPosition.position;
+        }
+        return transform.position;
     }
 
     void OnCollisionEnter2D(Collision2D coll)
