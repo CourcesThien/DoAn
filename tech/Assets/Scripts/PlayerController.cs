@@ -43,6 +43,12 @@ public class PlayerController : MonoSingleton<PlayerController>
 
     public Transform seedPosition;
 
+    public Transform seekAfter;
+    public Transform seekBefore;
+    public Transform seekLeft;
+    public Transform seekRight;
+
+
     void Start()
     {
         rigi = GetComponent<Rigidbody2D>();
@@ -93,10 +99,12 @@ public class PlayerController : MonoSingleton<PlayerController>
                 Anim.SetFloat("Velocity_Y", movementVector.y);
 
                 if (seed != null)
-                {
+                {   
+                    this.Anim.SetBool("isMove", true);  
+                    
                     seed.anim.SetFloat("Velocity_X", movementVector.x);
                     seed.anim.SetFloat("Velocity_Y", movementVector.y);
-                    this.Anim.SetBool("isMove", true);  
+
                 }
 
                 this.Anim.SetBool("isPush", playerManager.HasCollisionBox);
@@ -112,6 +120,9 @@ public class PlayerController : MonoSingleton<PlayerController>
 
                 Anim.SetFloat("Last_Velo_X", lastMovementVector.x);
                 Anim.SetFloat("Last_Velo_Y", lastMovementVector.y);
+
+                seed.anim.SetFloat("Last_Velo_X", movementVector.x);
+                seed.anim.SetFloat("Last_Velo_Y", movementVector.y);
 
                 if (seed != null)
                 {
@@ -130,11 +141,34 @@ public class PlayerController : MonoSingleton<PlayerController>
 
     public Vector2 GetPositionSeed()
     {
-        if (seedPosition != null)
+//        if (seedPosition != null)
+//        {
+//            return seedPosition.position;
+//        }
+//        return transform.position;
+        Transform transResult = null;
+        if (lastMovementVector.y == -1)
         {
-            return seedPosition.position;
+            // after
+            transResult = seekAfter;
         }
-        return transform.position;
+        else if (lastMovementVector.y == 1)
+        {
+            // front
+            transResult = seekBefore;
+        }
+        else if (lastMovementVector.x == -1)
+        {
+            // right
+            transResult = seekRight;
+        }
+        else
+        {
+            //left
+            transResult = seekLeft;
+
+        }
+        return transResult.position;
     }
 
     void OnCollisionEnter2D(Collision2D coll)
