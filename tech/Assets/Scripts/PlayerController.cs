@@ -8,6 +8,7 @@ public class PlayerManager
     public float defaultMoveSpeed = 2;
     public float currentMoveSpeed = 0.0f;
     public bool canMove = true;
+    [SerializeField]
     private bool hasCollisionBox = false;
 
     public bool HasCollisionBox
@@ -23,26 +24,24 @@ public class PlayerManager
     public float SubSpeed = 0.0f;
 }
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoSingleton<PlayerController>
 {
-
     //Variables of types Rigidbody and Animator
-    public Rigidbody RBody;
+    public Rigidbody2D rigi;
     [SerializeField]
     private Animator Anim;
 
     //Variable for Player movement speed
-
     public float playerSpeed = 0;
     public PlayerManager playerManager;
     [SerializeField]
-    private Vector3 movementVector = Vector3.zero;
+    private Vector2 movementVector = Vector2.zero;
     [SerializeField]
-    private Vector3 lastMovementVector = Vector3.zero;
+    private Vector2 lastMovementVector = Vector2.zero;
 
     void Start()
     {
-        RBody = GetComponent<Rigidbody>();
+        rigi = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
 
         // set initial speed to default and current speed to default
@@ -54,9 +53,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Gets Player input. GetAxisRaw returns true or false, GetAxis allows floating point precision which we dont need for this level of movement
-        movementVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         movementVector.Normalize(); // magnitude set at 1 always so diagonal movement isn't faster
-        playerManager.canMove = (movementVector != Vector3.zero);
+        playerManager.canMove = (movementVector != Vector2.zero);
 
 
         if (playerManager.canMove)
@@ -64,13 +63,13 @@ public class PlayerController : MonoBehaviour
             lastMovementVector = movementVector;
             // set updated speed to currentSpeed
             playerSpeed = (playerManager.currentMoveSpeed - playerManager.SubSpeed) * Time.deltaTime;
-            RBody.MovePosition(RBody.position + (movementVector * playerSpeed));
+            rigi.MovePosition(rigi.position + (movementVector * playerSpeed));
 
             if (Anim != null)
             {
                 //Updates the direction so that we don't snap back to original position 
                 Anim.SetFloat("Velocity_X", movementVector.x);
-                Anim.SetFloat("Velocity_Y", movementVector.z);
+                Anim.SetFloat("Velocity_Y", movementVector.y);
 
 
                
@@ -87,15 +86,15 @@ public class PlayerController : MonoBehaviour
                 this.Anim.SetBool("isPush", false);
 
                 Anim.SetFloat("Last_Velo_X", lastMovementVector.x);
-                Anim.SetFloat("Last_Velo_Y", lastMovementVector.z);
+                Anim.SetFloat("Last_Velo_Y", lastMovementVector.y);
             }
         }
          
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D coll)
     {
-        if (collision.transform.tag.Equals("Box"))
+        if (coll.transform.tag.Equals("BoxKey"))
         {
             if (playerManager.canMove)
                 playerManager.HasCollisionBox = true;
@@ -106,31 +105,42 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void OnCollisionStay(Collision collision)
+    void OnCollisionStay2D(Collision2D other)
     {
-        if (collision.transform.tag.Equals("BoxKey"))
+        if (other.transform.tag.Equals("BoxKey"))
         {
-            normalTime = collision.relativeVelocity;
             if (playerManager.canMove)
                 playerManager.HasCollisionBox = true;
             else
                 playerManager.HasCollisionBox = false;
             
         }
+
     }
 
-    void OnCollisionExit(Collision collision)
+
+    void OnCollisionExit2D(Collision2D coll)
     {
-        if (collision.transform.tag.Equals("BoxKey"))
+        Debug.Log("exit");
+        if (coll.transform.tag.Equals("BoxKey"))
         {
             playerManager.HasCollisionBox = false;
         }
     }
 
-    private Vector3 normalTime = Vector3.zero;
+    public void AddGravity()
+    {
+        if (rigi)
+        {
+            rigi.gravityScale = 1;
+        }
+    }
 
-    //    void OnGUI()
-    //    {
-    //        GUILayout.Label("collision - " + normalTime);
-    //    }
+    public void DisableGravity()
+    {
+        if (rigi)
+        {
+            rigi.gravityScale = 0;
+        }
+    }
 }

@@ -26,8 +26,8 @@ namespace RPG
             {
                 stepMove = camSpeed * Time.deltaTime;
                 posTarget = Target.position;
-                posTarget.y = 0;
-                myTranform.position = Vector3.MoveTowards(myTranform.position, posTarget, stepMove);// Vector3.Lerp(myTranform.position, posTarget, camSpeed);
+                posTarget.z = 0;
+                myTranform.position = Vector2.MoveTowards(myTranform.position, posTarget, stepMove);// Vector3.Lerp(myTranform.position, posTarget, camSpeed);
             }
         }
     }
