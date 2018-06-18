@@ -10,7 +10,8 @@ public class EndPointScene : MonoBehaviour
     {
         if (col.tag.Equals("Player"))
         {
-            SceneManager.LoadScene("Scene2");
+            //SceneManager.LoadScene("Scene2");
+            Initiate.Fade("Scene2", Color.black, 1.0f);
         }
     }
         
