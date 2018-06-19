@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using RPG;
 
 public class SceneOne : MonoSingleton<SceneOne>
 {
@@ -39,7 +40,10 @@ public class SceneOne : MonoSingleton<SceneOne>
             }
             objStartPoint.SetActive(false);
 
-            //PlayerController.Instance.transform.position = pos;
+            PlayerController.Instance.transform.position = pos;
+            Seed.Instance.transform.position = pos;
+            CameraFollow.Instance.transform.position = pos;
+          
         }
         catch
         {

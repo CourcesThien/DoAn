@@ -21,7 +21,7 @@ public class BoxKey : MonoBehaviour
     private float hard = 0.4f;
     [SerializeField]
     private bool isDone = false;
-
+    public GameObject objKeyDone;
     public Action onDone = null;
     // Use this for initialization
     void Start()
@@ -30,6 +30,7 @@ public class BoxKey : MonoBehaviour
         sprDefault = sprRender.sprite;
         positionBoxKey = transform.position;
         positionBoxKey.z = 0;
+        objKeyDone.SetActive(false);
     }
 	
     // Update is called once per frame
@@ -46,11 +47,18 @@ public class BoxKey : MonoBehaviour
                 {
                     currTransKey.position = positionBoxKey;
                     Debug.Log("done");
+
                     isDone = true;
                     if (onDone != null)
                     {
                         onDone.Invoke();
                     }
+
+                    currTransKey.gameObject.SetActive(false);
+
+                    PlayerController.Instance.playerManager.HasCollisionBox = false;
+                    if (objKeyDone != null)
+                        objKeyDone.SetActive(true);
                 }
             }
             else
