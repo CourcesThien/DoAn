@@ -13,6 +13,7 @@ public class SceneTwo : MonoSingleton<SceneTwo>
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Vector3 pos = startPosition.position;

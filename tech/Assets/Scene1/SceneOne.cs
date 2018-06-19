@@ -11,18 +11,41 @@ public class SceneOne : MonoSingleton<SceneOne>
 
     public Transform startPosition;
 
+    public BoxKey[] allBoxKey;
+
+    int currKeyDone = 0;
+    private int KEY_DONE = 2;
+
+    public GameObject objStartPoint;
 
     protected override void Awake()
     {
         base.Awake();
         SceneManager.sceneLoaded += OnSceneLoaded;
+
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Vector3 pos = startPosition.position;
         pos.z = 0;
-        PlayerController.Instance.transform.position = pos;
+
+        foreach (var item in allBoxKey)
+        {
+            item.onDone += OnDoneKeyOne;
+        }
+        objStartPoint.SetActive(false);
+
+        //PlayerController.Instance.transform.position = pos;
+    }
+
+    private void OnDoneKeyOne()
+    {
+        currKeyDone++;
+        if (currKeyDone >= 2)
+        {
+            objStartPoint.SetActive(true);
+        }
     }
 
     public void SetActiveWallBlock(bool isActive)

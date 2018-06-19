@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [System.Serializable]
 public class PlayerManager
@@ -39,15 +40,16 @@ public class PlayerController : MonoSingleton<PlayerController>
     [SerializeField]
     private Vector2 movementVector = Vector2.zero;
     [SerializeField]
-    private Vector2 lastMovementVector = Vector2.zero;
+    public Vector2 lastMovementVector = Vector2.zero;
 
     public Transform seedPosition;
-
+    [Space(5)]
     public Transform seekAfter;
     public Transform seekBefore;
     public Transform seekLeft;
     public Transform seekRight;
 
+    public Action<Vector2> onMove = null;
 
     void Start()
     {
@@ -58,23 +60,14 @@ public class PlayerController : MonoSingleton<PlayerController>
         playerSpeed = playerManager.defaultMoveSpeed * Time.deltaTime;
         playerManager.currentMoveSpeed = playerManager.defaultMoveSpeed;
 
-        StartCoroutine(RandomSeed());
+//        StartCoroutine(RandomSeed());
     }
 
     public void SetSeed(Seed _seed)
     {
         this.seed = _seed;
     }
-
-
-    private IEnumerator RandomSeed()
-    {
-        while (true)
-        {
-            seedPosition.localPosition = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
-            yield return new WaitForSeconds(Random.Range(3, 4));
-        }
-    }
+       
 
     // Update is called once per frame
     void Update()
@@ -84,7 +77,10 @@ public class PlayerController : MonoSingleton<PlayerController>
         movementVector.Normalize(); // magnitude set at 1 always so diagonal movement isn't faster
         playerManager.canMove = (movementVector != Vector2.zero);
 
-
+        if (onMove != null)
+        {
+            onMove.Invoke(movementVector);
+        }
         if (playerManager.canMove)
         {
             lastMovementVector = movementVector;
@@ -98,14 +94,14 @@ public class PlayerController : MonoSingleton<PlayerController>
                 Anim.SetFloat("Velocity_X", movementVector.x);
                 Anim.SetFloat("Velocity_Y", movementVector.y);
 
-                if (seed != null)
-                {   
-                    this.Anim.SetBool("isMove", true);  
-                    
-                    seed.anim.SetFloat("Velocity_X", movementVector.x);
-                    seed.anim.SetFloat("Velocity_Y", movementVector.y);
-
-                }
+//                if (seed != null)
+//                {   
+//                    this.Anim.SetBool("isMove", true);  
+//                    
+//                    seed.anim.SetFloat("Velocity_X", movementVector.x);
+//                    seed.anim.SetFloat("Velocity_Y", movementVector.y);
+//
+//                }
 
                 this.Anim.SetBool("isPush", playerManager.HasCollisionBox);
                 this.Anim.SetBool("isMove", true);  
@@ -121,17 +117,22 @@ public class PlayerController : MonoSingleton<PlayerController>
                 Anim.SetFloat("Last_Velo_X", lastMovementVector.x);
                 Anim.SetFloat("Last_Velo_Y", lastMovementVector.y);
 
-                seed.anim.SetFloat("Last_Velo_X", movementVector.x);
-                seed.anim.SetFloat("Last_Velo_Y", movementVector.y);
-
-                if (seed != null)
-                {
-                    this.Anim.SetBool("isMove", false);  
-                }
+//                seed.anim.SetFloat("Last_Velo_X", movementVector.x);
+//                seed.anim.SetFloat("Last_Velo_Y", movementVector.y);
+//
+//                if (seed != null)
+//                {
+//                    this.Anim.SetBool("isMove", false);  
+//                }
             }
         }
 
-
+        // control seed
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (seed != null)
+                seed.canMove = !seed.canMove;   
+        }
     }
 
     public Vector2 GetPosition()

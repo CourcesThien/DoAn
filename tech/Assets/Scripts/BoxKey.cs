@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BoxKey : MonoBehaviour
 {
@@ -20,13 +21,15 @@ public class BoxKey : MonoBehaviour
     private float hard = 0.4f;
     [SerializeField]
     private bool isDone = false;
+
+    public Action onDone = null;
     // Use this for initialization
     void Start()
     {
         sprRender = GetComponent<SpriteRenderer>();
         sprDefault = sprRender.sprite;
         positionBoxKey = transform.position;
-        positionBoxKey.z += 0.4f;
+        positionBoxKey.z = 0;
     }
 	
     // Update is called once per frame
@@ -44,6 +47,10 @@ public class BoxKey : MonoBehaviour
                     currTransKey.position = positionBoxKey;
                     Debug.Log("done");
                     isDone = true;
+                    if (onDone != null)
+                    {
+                        onDone.Invoke();
+                    }
                 }
             }
             else
@@ -63,17 +70,17 @@ public class BoxKey : MonoBehaviour
     //        GUILayout.Label("abc = " + disToKey);
     //    }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (other.tag.Equals("BoxKey"))
+        if (col.tag.Equals("BoxKey"))
         {
             hasKey = true;
-            currTransKey = other.transform;
+            currTransKey = col.transform;
             sprRender.sprite = sprKeyDown;
         }
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag.Equals("BoxKey"))
         {
@@ -82,7 +89,7 @@ public class BoxKey : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag.Equals("BoxKey"))
         {
