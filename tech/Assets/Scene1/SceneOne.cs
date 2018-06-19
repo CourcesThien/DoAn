@@ -27,16 +27,24 @@ public class SceneOne : MonoSingleton<SceneOne>
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Vector3 pos = startPosition.position;
-        pos.z = 0;
-
-        foreach (var item in allBoxKey)
+        try
         {
-            item.onDone += OnDoneKeyOne;
-        }
-        objStartPoint.SetActive(false);
+            
+            Vector3 pos = startPosition.position;
+            pos.z = 0;
 
-        //PlayerController.Instance.transform.position = pos;
+            foreach (var item in allBoxKey)
+            {
+                item.onDone += OnDoneKeyOne;
+            }
+            objStartPoint.SetActive(false);
+
+            //PlayerController.Instance.transform.position = pos;
+        }
+        catch
+        {
+            
+        }
     }
 
     private void OnDoneKeyOne()

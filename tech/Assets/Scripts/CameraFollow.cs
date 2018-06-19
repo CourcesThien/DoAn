@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace RPG
 {
-    public class CameraFollow : MonoBehaviour
+    public class CameraFollow : MonoSingleton<CameraFollow>
     {
 
         //References the Player object

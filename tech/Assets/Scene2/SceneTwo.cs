@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using RPG;
 
 public class SceneTwo : MonoSingleton<SceneTwo>
 {
@@ -16,8 +17,13 @@ public class SceneTwo : MonoSingleton<SceneTwo>
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Vector3 pos = startPosition.position;
-        pos.z = 0;
-        PlayerController.Instance.transform.position = pos;
+        if (startPosition != null)
+        {
+            Vector3 pos = startPosition.position;
+            pos.z = 0;
+            PlayerController.Instance.transform.position = pos;
+            Seed.Instance.transform.position = pos;
+            CameraFollow.Instance.transform.position = pos;
+        }
     }
 }

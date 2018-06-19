@@ -893,27 +893,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 197935689}
-  - component: {fileID: 197935688}
   m_Layer: 0
   m_Name: CameraMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &197935688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 197935687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f2f2512d791e48c9bb43f3289c7ad97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 0}
-  camSpeed: 4
+  m_IsActive: 0
 --- !u!4 &197935689
 Transform:
   m_ObjectHideFlags: 0
@@ -2568,6 +2554,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 578488028}
+  - component: {fileID: 578488027}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -2575,6 +2562,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &578488027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 578488026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc6ca01a12864b4d97b900decf7be21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {fileID: 1011958476}
 --- !u!4 &578488028
 Transform:
   m_ObjectHideFlags: 0
@@ -4105,7 +4104,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1011958475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.540001, y: 0.3199997, z: -5.760939}
+  m_LocalPosition: {x: -7.2, y: 14.7, z: -5.760939}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 578488028}
@@ -4135,7 +4134,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1048553069}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.93, y: -9.78, z: -5.760939}
+  m_LocalPosition: {x: 23.2, y: 13.1, z: -5.760939}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 578488028}

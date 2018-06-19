@@ -45,7 +45,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T
         if (m_Instance == null)
         {
             m_Instance = this as T;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
     }
 

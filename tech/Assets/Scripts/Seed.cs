@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seed : MonoBehaviour
+public class Seed : MonoSingleton<Seed>
 {
     public PlayerController player;
 
@@ -56,16 +56,16 @@ public class Seed : MonoBehaviour
             {
                 stepMove = speed * Time.deltaTime;
                 transform.position = Vector2.MoveTowards(transform.position, player.GetPositionSeed(), stepMove);// Vector3.Lerp(myTranform.position, posTarget, camSpeed);
-                if (transform.position.Equals(player.GetPositionSeed()))
-                {
-                    anim.SetBool("isMove", true);  
-                }
-                else
-                    anim.SetBool("isMove", false);
+//                if (transform.position.Equals(player.GetPositionSeed()))
+//                {
+//                    anim.SetBool("isMove", true);  
+//                }
+//                else
+//                    anim.SetBool("isMove", false);
             }
             else
             {
-                anim.SetBool("isMove", false);
+                //anim.SetBool("isMove", false);
             }
             Debug.Log(transform.forward);
         }

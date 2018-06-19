@@ -11,6 +11,8 @@ public class EndPointScene : MonoBehaviour
         if (col.tag.Equals("Player"))
         {
             //SceneManager.LoadScene("Scene2");
+
+            Destroy(SceneOne.Instance.gameObject);
             Initiate.Fade("Scene2", Color.black, 1.0f);
         }
     }
